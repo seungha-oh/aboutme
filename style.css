@@ -213,15 +213,19 @@ header a {
   padding: var(--padding);
 }
 
-.writingone .img {
-  place-items: center;
+.writing .img {
+  display: grid;
+
+  align-items: center;
 }
 
 .writing .img img {
   width: 500px;
   height: 500px;
+  padding: var(--padding);
 }
 
+.writing .img .title,
 .writingone p {
   font-family: "Nanum Myeongjo", serif;
   line-height: 25px;
@@ -231,8 +235,14 @@ header a {
   font-weight: bold;
 }
 
+.writing .img .title,
 .writingone p {
   font-size: var(--font-small);
+}
+
+.writing .img .title {
+  padding: var(--padding);
+  text-align: center;
 }
 
 .writingone p:last-child {
