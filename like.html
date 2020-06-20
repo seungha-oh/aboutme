@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aboutme_like</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d7786bb13c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="study.html">Study</a></li>
+        <li><a href="like.html">Like</a></li>
+        <li><a href="coding.html">Coding</a></li>
+      </ul>
+      <a href="#" class="toggleBtn"> <i class="fas fa-bars"></i> </a>
+    </nav>
+
+    <!-- like -->
+    <div class="like">
+      <div class="photo">
+        <img src="toriblanket.jpg" alt="" />
+        <div class="text">tori in blanket</div>
+      </div>
+      <div class="photo">
+        <img src="mozzicurious.jpg" alt="" />
+        <div class="text">curious mozzi</div>
+      </div>
+      <div class="photo">
+        <img src="funny.jpg" alt="" />
+        <div class="text">funny</div>
+      </div>
+      <div class="photo">
+        <img src="mozzicute.jpg" alt="" />
+        <div class="text">cute mozzi</div>
+      </div>
+      <div class="photo">
+        <img src="broccoli.jpg" alt="" />
+        <div class="text">broccoli</div>
+      </div>
+      <div class="photo">
+        <img src="beachrock.jpg" alt="" />
+        <div class="text">songjung</div>
+      </div>
+      <div class="photo">
+        <img src="torihungry.jpg" alt="" />
+        <div class="text">hungry tori</div>
+      </div>
+      <div class="photo">
+        <img src="walk.jpg" alt="" />
+        <div class="text">walk</div>
+      </div>
+      <div class="photo">
+        <img src="mozzisleepy.jpg" alt="" />
+        <div class="text">sleepy</div>
+      </div>
+    </div>
+
+    <!-- comments -->
+    <div id="disqus_thread"></div>
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+      (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://aboutme-5.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+  </body>
+</html>

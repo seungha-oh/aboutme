@@ -1,0 +1,233 @@
+:root {
+  /* font-color */
+  --red-color: #db1640;
+  --white-color: white;
+  --black-color: black;
+  --grey-color: #e1e0de;
+  --grey-dark-color: #808080;
+
+  /* size */
+  --padding: 12px;
+  --img-size: 300px;
+  --photo-size: 200px;
+
+  /* font-size */
+  --font-large: 90px;
+  --font-medium: 20px;
+  --font-small: 12px;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+/* navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  margin-bottom: var(--padding);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding: var(--padding);
+  color: var(--black-color);
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+  color: var(--grey-color);
+}
+
+.navbar .toggleBtn {
+  position: absolute;
+  right: 15px;
+  font-size: var(--font-medium);
+  color: var(--black-color);
+  display: none;
+}
+
+/* main */
+main {
+  width: 100%;
+  height: 500px;
+  place-items: center;
+  place-content: center;
+  display: grid;
+  grid-template: "header video" 1fr / 500px 1fr;
+}
+
+header a {
+  grid-area: header;
+  font-weight: bold;
+  font-size: var(--font-large);
+  color: var(--red-color);
+}
+
+.video {
+  grid-area: video;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .toggleBtn {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  main header {
+    padding: var(--padding);
+  }
+
+  main .video {
+    padding: var(--padding);
+  }
+}
+
+/* study */
+.study {
+  width: 100%;
+  height: 700px;
+  padding: var(--padding);
+  display: grid;
+}
+
+.study li {
+  display: grid;
+  grid-template: "studyimg studyinfo" 1fr / 1fr 4fr;
+  padding: calc(var(--padding) * 2) var(--padding);
+  place-items: center;
+  border-bottom: solid 1px var(--grey-color);
+}
+
+.study li img {
+  grid-area: studyimg;
+  width: calc(var(--img-size) / 2);
+  height: calc(var(--img-size) / 2);
+  border-radius: 50%;
+}
+
+.study li .studyinfo {
+  grid-area: studyinfo;
+  display: flex;
+  flex-direction: column;
+}
+
+.study li .studyinfo button {
+  margin-bottom: var(--padding);
+  background-color: var(--red-color);
+  border: none;
+  outline: none;
+  width: 200px;
+  cursor: pointer;
+  padding: var(--padding);
+  border-radius: 8px 0 8px 0;
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+.study li .studyinfo button:active {
+  width: 100%;
+  transition-duration: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  .study li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .study li .img {
+    width: 100%;
+    justify-content: right;
+    padding: var(--padding);
+  }
+}
+
+/* like */
+.like {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(3, 1fr);
+  place-content: center;
+  margin-bottom: var(--padding);
+}
+
+.photo {
+  position: relative;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.photo .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+}
+
+.photo img {
+  width: var(--img-size);
+  height: var(--img-size);
+  padding: var(--padding);
+}
+
+/* coding */
+.writing {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(2, 1fr);
+  padding: var(--padding);
+}
+
+.writingone .img {
+  place-items: center;
+}
+
+.writing .img img {
+  width: 500px;
+  height: 500px;
+}
+
+.writingone p {
+  font-family: "Nanum Myeongjo", serif;
+  line-height: 25px;
+}
+
+.writingone p:first-child {
+  font-weight: bold;
+}
+
+.writingone p {
+  font-size: var(--font-small);
+}
+
+.writingone p:last-child {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
